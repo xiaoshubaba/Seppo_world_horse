@@ -1,0 +1,6 @@
+DistanceName	Distance
+hellinger	Specy.hellinger.dist
+jsd	Specy.jsd.dist
+bray	Specy.bray.dist
+pearson	Specy.pearson.dist
+spearman	Specy.spearman.dist
