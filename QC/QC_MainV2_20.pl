@@ -7,7 +7,7 @@ use Term::ANSIColor qw(:constants);
 #
 #This is a script to generate quantity control script
 #ChangeLog
-#20120324 First Version
+#20090924 First Version
 #20120511 Add trim head
 #20130704 Add 
 #20160302 Add Universal&Indexed adaptors 
