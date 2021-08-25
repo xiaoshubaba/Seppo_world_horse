@@ -1,0 +1,8 @@
+DistanceName	Distance
+hellinger	wol_gca.hellinger.dist
+jsd	wol_gca.jsd.dist
+bray	wol_gca.bray.dist
+pearson	wol_gca.pearson.dist
+spearman	wol_gca.spearman.dist
+weightedUnifrac	gca.un_weighted_unifrac.dist
+unweightdUnifrac	gca.weighted_unifrac.dist

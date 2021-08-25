@@ -1,0 +1,23 @@
+library(picante)
+library(phytools)	
+tree <- read.newick("tree.nwk")	
+ma   <- t(read.table("wol_gca.ajust.morethan_2.Relative.abundance"))
+dis <- pd(ma,tree)
+md <- read.table("sample.metadata",head=T)	
+dis$status <- md$status
+p = ggboxplot(disL[which(disL$variable=="PD"),],xlab="",ylab="","status","value",color="status",strip.position="bottom",facet.by="variable",add="jitter",palette=c("#B03060","#87CEEB")) + stat_compare_means(comparisons=list(c("domestic","wild")),method="wilcox.test",method.args=list(alternative="less"))
+p + theme(legend.position="none", axis.ticks.x =element_blank(), axis.text.x=element_blank(),strip.text.x = element_text(colour = "black", size = 6))
+ 
+
+library(phyloseq)
+library(ape)
+library(ade4)
+ma <- read.table("wol_gca.ajust.morethan_2.Relative.abundance")	
+treeN <- read.tree("tree.nwk")
+Unifrac_sequence_matrix <- otu_table(ma, taxa_are_rows = TRUE)	
+x1 <- phyloseq(Unifrac_sequence_matrix,treeN)
+Weighted_Unifrac_distance <- UniFrac(x1,weighted=T,normalized=T,fast=T)
+Un_Weighted_Unifrac_distance <-UniFrac(x1,weighted=F,normalized=T,fast=T)
+write.table(as.matrix(Weighted_Unifrac_distance),"gca.weighted_unifrac.dist",sep="\t")
+write.table(as.matrix(Un_Weighted_Unifrac_distance),"gca.un_weighted_unifrac.dist",sep="\t")
+save.image("tree.image")

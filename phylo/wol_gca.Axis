@@ -1,0 +1,8 @@
+V1	V2	V3	V4	V5
+hellinger	23.6	10.6	7.6	7	5.4
+jsd	21.7	9.9	7.1	6.8	5.3
+bray	25.6	10.7	7.3	6.8	5.6
+pearson	22.5	12.2	10.3	8.9	7.9
+spearman	26.1	12.9	9.3	8.4	4.6
+weightedUnifrac	16.6	8.8	7	5.8	4
+unweightdUnifrac	21.5	12.6	11.3	7.2	5.9
